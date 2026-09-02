@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Apoterra Brand Theme — "Batu & Arang" (Stone & Charcoal)
+   Configured via Tailwind CSS v4 @theme directive.
+   All rendered text uses Indonesian; code identifiers use English.
+   ========================================================================== */
+
+@theme {
+  /* ---- Color palette: warm neutrals ---- */
+  --color-arang-hangat: #4A453D;           /* Primary: Warm Charcoal */
+  --color-arang-hangat-tint: #D7D6D4;
+  --color-arang-hangat-hover: #3D3932;
+  --color-arang-hangat-active: #312E28;
+
+  --color-batu: #6E685E;                   /* Secondary: Stone */
+  --color-batu-tint: #DFDEDC;
+  --color-batu-shade: #5A554D;
+
+  --color-arang: #25231E;                  /* Dark: Charcoal (headings, text) */
+
+  --color-kapur: #F2EEE7;                  /* Neutral: Chalk (page bg) */
+
+  --color-tanah: #8E7F64;                  /* Accent: Soil */
+  --color-tanah-tint-1: #E6E3DD;
+  --color-tanah-tint-2: #C9C2B5;          /* Neutral badge bg */
+  --color-tanah-shade: #746852;
+
+  /* Surfaces & borders */
+  --color-surface: #FCFBFA;                /* Card surface */
+  --color-text-secondary: rgba(37, 35, 30, 0.60);
+  --color-border: rgba(37, 35, 30, 0.14);
+  --color-border-strong: rgba(37, 35, 30, 0.24);
+  --color-focus-ring: rgba(74, 69, 61, 0.32);
+
+  /* Semantic UI colors (only these "glow") */
+  --color-success: #16A34A;
+  --color-success-bg: #DCFCE7;
+  --color-success-text: #166534;
+
+  --color-warning: #F59E0B;
+  --color-warning-bg: #FEF3C7;
+  --color-warning-text: #92400E;
+
+  --color-danger: #EF4444;
+  --color-danger-bg: #FEE2E2;
+  --color-danger-text: #B91C1C;
+
+  /* ---- Typography ---- */
+  --font-serif: "Lora", Georgia, serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+/* Base resets & defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-arang);
+  background-color: var(--color-kapur);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Utility for focus-visible outlines using brand focus ring */
+*:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
