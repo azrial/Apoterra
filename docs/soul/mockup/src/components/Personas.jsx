@@ -2,17 +2,17 @@
 
 import Icon from "./Icon";
 import Section from "./Section";
-import { PERSONAS } from "../data/content";
+import { PERSONAS, PERSONAS_HEADING } from "../data/content";
 
 export default function Personas() {
   return (
     <Section id="persona">
       <div className="mb-12 text-center">
         <h2 className="font-serif text-3xl font-semibold text-arang md:text-4xl">
-          Siapa yang Dilayani
+          {PERSONAS_HEADING.heading}
         </h2>
         <p className="mt-3 text-text-secondary">
-          Apoterra dirancang untuk dua kelompok pengguna utama.
+          {PERSONAS_HEADING.description}
         </p>
       </div>
 

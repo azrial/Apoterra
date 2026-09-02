@@ -37,7 +37,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <Button variant="primary" onClick={() => document.getElementById("fitur")?.scrollIntoView({ behavior: "smooth" })}>
-            Coba Sekarang
+            Pelajari Apoterra
           </Button>
         </div>
 
@@ -76,7 +76,7 @@ export default function Navbar() {
                   document.getElementById("fitur")?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Coba Sekarang
+                Pelajari Apoterra
               </Button>
             </div>
           </nav>

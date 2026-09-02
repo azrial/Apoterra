@@ -2,17 +2,17 @@
 
 import Icon from "./Icon";
 import Section from "./Section";
-import { FEATURES } from "../data/content";
+import { FEATURES, FEATURES_HEADING } from "../data/content";
 
 export default function Features() {
   return (
     <Section id="fitur">
       <div className="mb-12 text-center">
         <h2 className="font-serif text-3xl font-semibold text-arang md:text-4xl">
-          Fitur Inti
+          {FEATURES_HEADING.heading}
         </h2>
         <p className="mt-3 text-text-secondary">
-          Solusi langsung untuk setiap tantangan operasional apotek Anda.
+          {FEATURES_HEADING.description}
         </p>
       </div>
 

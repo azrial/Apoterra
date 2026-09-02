@@ -2,17 +2,17 @@
 
 import Icon from "./Icon";
 import Section from "./Section";
-import { PILLARS } from "../data/content";
+import { PILLARS, PILLARS_HEADING } from "../data/content";
 
 export default function Pillars() {
   return (
     <Section id="pilar" background="surface">
       <div className="mb-12 text-center">
         <h2 className="font-serif text-3xl font-semibold text-arang md:text-4xl">
-          Pilar Merek
+          {PILLARS_HEADING.heading}
         </h2>
         <p className="mt-3 text-text-secondary">
-          Tiga fondasi yang menopang setiap keputusan produk Apoterra.
+          {PILLARS_HEADING.description}
         </p>
       </div>
 

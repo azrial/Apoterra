@@ -4,22 +4,26 @@
 
 export const NAV_LINKS = [
   { label: "Beranda", href: "#beranda" },
-  { label: "Pilar", href: "#pilar" },
-  { label: "Fitur", href: "#fitur" },
-  { label: "Prinsip", href: "#prinsip" },
-  { label: "Persona", href: "#persona" },
-  { label: "Sukses", href: "#sukses" },
-  { label: "Visi", href: "#visi" },
+  { label: "Cara Kerja", href: "#fitur" },
+  { label: "Untuk Apotek Anda", href: "#persona" },
+  { label: "Mengapa Apoterra", href: "#pilar" },
 ];
 
 export const HERO = {
   tagline: "Berpijak kokoh. Bertumbuh tenang.",
+  headline: "Operasional apotek lebih rapi, terkendali, dan mudah dipantau.",
   narrative:
-    "Apotek yang baik tidak dibangun di atas pasir — ia butuh tanah yang kokoh. Apoterra adalah tanah itu: tempat apotek Anda berpijak kuat, berakar dalam, dan bertumbuh tenang.",
+    "Apoterra membantu Anda mencatat transaksi, mengelola stok, memantau laporan, dan menjaga operasional apotek tetap teratur — dengan data yang jelas dan proses yang mudah digunakan setiap hari.",
   promise:
-    "Apoterra menopang operasional apotek Anda — memberi pijakan yang kokoh, kendali yang penuh, dan ketenangan yang nyata.",
-  primaryCta: "Coba Sekarang",
-  secondaryCta: "Pelajari Lebih Lanjut",
+    "Untuk pemilik dan tim apotek yang ingin bekerja lebih tenang, mulai dari fondasi operasional yang benar.",
+  primaryCta: "Pelajari Apoterra",
+  secondaryCta: "Lihat Fitur Utama",
+};
+
+export const PILLARS_HEADING = {
+  heading: "Fondasi yang membuat apotek lebih tenang",
+  description:
+    "Apoterra dibangun untuk membantu Anda menjalankan apotek dengan data yang jelas, kendali yang terlihat, dan operasional yang lebih terkendali.",
 };
 
 export const PILLARS = [
@@ -27,165 +31,187 @@ export const PILLARS = [
     id: "pijakan-kokoh",
     title: "Pijakan kokoh",
     description:
-      "Fondasi operasional yang stabil & tepercaya. Data stok/harga/kedaluwarsa yang akurat dan sistem yang andal sebagai dasar harian.",
+      "Stok, harga, transaksi, dan kedaluwarsa tercatat dengan lebih rapi sebagai dasar keputusan harian.",
     iconName: "foundation",
   },
   {
     id: "kendali-penuh",
     title: "Kendali penuh",
     description:
-      "Kendali & visibilitas tetap di tangan pemilik atas data dan operasional bisnis apotek. Pemilik dapat memantau dan mengendalikan seluruh operasional dari mana pun.",
+      "Pantau ringkasan operasional, laporan, dan status stok tanpa harus selalu berada di toko.",
     iconName: "control",
   },
   {
     id: "ketenangan-nyata",
     title: "Ketenangan nyata",
     description:
-      "Keyakinan bahwa semuanya beres / pada tempatnya. Transparansi + peringatan dini (kedaluwarsa, selisih) yang mengurangi kekhawatiran.",
+      "Data yang transparan dan peringatan lebih awal membantu Anda mengetahui apa yang perlu ditindaklanjuti.",
     iconName: "peace",
   },
 ];
 
+export const FEATURES_HEADING = {
+  heading: "Semua yang dibutuhkan untuk operasional harian",
+  description:
+    "Dari transaksi di loket hingga pemantauan pemilik, Apoterra membantu tim bekerja lebih cepat tanpa kehilangan ketelitian.",
+};
+
 export const FEATURES = [
   {
     id: "data-lengkap",
-    title: "Data & catatan lengkap",
+    title: "Catatan operasional terpusat",
     description:
-      "Semua transaksi, stok, dan pembelian tercatat digital, transparan, dan bisa diaudit.",
+      "Transaksi, stok masuk-keluar, dan pembelian tersimpan dalam satu alur yang lebih rapi dan mudah ditelusuri.",
     iconName: "database",
   },
   {
     id: "pantau-jarak-jauh",
-    title: "Pantau dari mana pun",
+    title: "Pantau apotek dari mana pun",
     description:
-      "Dashboard ringkasan harian, laporan, dan status stok diakses dari jarak jauh.",
+      "Lihat ringkasan harian, laporan, dan status stok untuk tetap mengetahui kondisi apotek saat Anda tidak berada di toko.",
     iconName: "monitor",
   },
   {
     id: "rekonsiliasi-selisih",
-    title: "Rekonsiliasi selisih",
-    description: "Deteksi dan lacak asal-usul selisih kas & stok.",
+    title: "Telusuri selisih dengan jelas",
+    description:
+      "Bantu menemukan dan melacak perbedaan antara catatan kas atau stok dengan kondisi operasional.",
     iconName: "reconcile",
   },
   {
     id: "peringatan-kedaluwarsa",
-    title: "Peringatan kedaluwarsa",
+    title: "Kenali kedaluwarsa lebih awal",
     description:
-      "Obat kedaluwarsa terdeteksi lebih dini, pembuangan berkurang.",
+      "Dapatkan visibilitas atas obat yang mendekati kedaluwarsa agar dapat ditindaklanjuti lebih cepat.",
     iconName: "expiry",
   },
   {
     id: "sumber-harga",
-    title: "Sumber harga terpusat",
+    title: "Harga yang lebih konsisten",
     description:
-      "Harga akurat dan terpusat, anti salah input di kasir.",
+      "Gunakan sumber harga terpusat untuk membantu staf melayani dengan informasi harga yang sama.",
     iconName: "price",
   },
   {
     id: "kasir-cepat",
-    title: "Kasir cepat & intuitif",
+    title: "Kasir sederhana dan responsif",
     description:
-      "Proses transaksi cepat, cek stok mudah, antrean berkurang.",
+      "Bantu staf memproses transaksi dan memeriksa ketersediaan stok dengan alur yang mudah dipahami.",
     iconName: "cashier",
   },
 ];
+
+export const PRINCIPLES_HEADING = {
+  heading: "Sederhana digunakan. Serius menjaga ketelitian.",
+  description:
+    "Apoterra tidak meminta Anda memilih antara cepat atau benar. Operasional harian membutuhkan keduanya.",
+};
 
 export const PRINCIPLES = {
   core: [
     {
       id: "kesederhanaan",
-      title: "Kesederhanaan & Kemudahan",
+      title: "Mudah dipakai setiap hari",
       description:
-        "Antarmuka sederhana, intuitif, minim pelatihan — mudah dipahami dan digunakan.",
+        "Alur yang sederhana membantu staf bekerja tanpa pelatihan yang berlarut-larut.",
     },
     {
       id: "akurasi",
-      title: "Akurasi Data",
+      title: "Data yang dapat diandalkan",
       description:
-        "Data yang tercatat benar — stok, harga, kedaluwarsa, transaksi.",
+        "Stok, harga, kedaluwarsa, dan transaksi dicatat dengan ketelitian sebagai dasar pengambilan keputusan.",
     },
     {
       id: "transparansi",
-      title: "Transparansi",
+      title: "Terbuka dan dapat ditelusuri",
       description:
-        "Semua terlacak & bisa diaudit — pengguna merasa tenang karena semuanya transparan.",
+        "Aktivitas operasional tetap terlihat sehingga lebih mudah diperiksa dan ditindaklanjuti.",
     },
   ],
   dualStandards: {
-    heading: "Standar Ganda",
-    items: ["Cepat DAN Akurat", "Konsisten DAN Fleksibel"],
-    note: "Kedua standar harus terpenuhi secara bersamaan — bukan pilihan salah satu.",
+    heading: "Standar kami",
+    items: ["Cepat sekaligus akurat", "Konsisten sekaligus fleksibel"],
+    note:
+      "Alurnya tetap mudah dipahami, sementara penggunaannya dapat menyesuaikan peran dan kebutuhan operasional apotek.",
   },
+};
+
+export const PERSONAS_HEADING = {
+  heading: "Dibuat untuk seluruh tim apotek",
+  description:
+    "Pemilik mendapatkan visibilitas. Staf mendapatkan alur kerja yang lebih sederhana. Keduanya bekerja dari data operasional yang sama.",
 };
 
 export const PERSONAS = [
   {
     id: "pemilik",
-    role: "Pemilik (Owner)",
-    summary: "Mengelola, memantau, dan mengambil keputusan.",
+    role: "Untuk pemilik apotek",
+    summary:
+      "Tetap mengetahui kondisi apotek, baik saat terlibat langsung maupun saat memantau dari jarak jauh.",
     types: [
-      "Tipe A: Hadir & Terlibat Langsung",
-      "Tipe B: Jarang Hadir / Memantau Jarak Jauh",
+      "Kelola operasional harian dengan informasi yang lebih teratur.",
+      "Pantau ringkasan, laporan, dan status stok tanpa harus selalu hadir di toko.",
     ],
     iconName: "owner",
   },
   {
     id: "staf",
-    role: "Staf",
-    summary: "Seluruh tim operasional menjalankan operasional harian.",
-    devices: "Tablet/handphone dan komputer di loket kasir. Antarmuka responsif.",
+    role: "Untuk staf operasional",
+    summary:
+      "Jalankan transaksi dan pekerjaan harian dengan alur yang sederhana, cepat, dan mudah dipahami.",
+    devices:
+      "Dapat digunakan melalui perangkat yang sesuai dengan pekerjaan — dari komputer di loket hingga tablet atau handphone.",
     iconName: "staff",
   },
 ];
 
 export const VISION_MISSION = {
+  heading: "Dibangun untuk pertumbuhan yang sehat",
   vision:
-    "Menjadi fondasi digital yang menumbuhkan apotek secara organik — berakar kokoh dan bertumbuh tenang.",
+    "Apoterra menjadi fondasi digital agar apotek dapat beroperasi dengan lebih rapi, mengambil keputusan dengan lebih jelas, dan bertumbuh secara bertahap.",
   mission: [
-    "Membangun aplikasi operasional apotek yang akurat dan mudah dipakai sehari-hari.",
-    "Menghadirkan kendali operasional dan visibilitas menyeluruh bagi pemilik — kapan pun, dari mana pun.",
-    "Menekan kerugian operasional agar apotek lebih sehat dan berkelanjutan.",
-    "Memberdayakan apotek bertumbuh dari satu toko menjadi jaringan yang kokoh.",
+    "Membuat pekerjaan operasional harian lebih mudah, dari transaksi hingga pencatatan stok.",
+    "Memberi pemilik gambaran yang jelas tentang kondisi apotek, kapan pun dan dari mana pun.",
+    "Membantu mengenali sumber potensi kerugian seperti selisih, kedaluwarsa, dan kesalahan harga.",
+    "Mendukung apotek berkembang dari satu toko menjadi jaringan dengan fondasi yang tetap kokoh.",
   ],
+};
+
+export const SUCCESS_METRICS_HEADING = {
+  heading: "Hasil yang ingin Anda rasakan dalam operasional",
+  description:
+    "Apoterra diarahkan pada perubahan yang nyata: lebih sedikit area yang tidak terlihat, lebih banyak keputusan yang berdasar.",
 };
 
 export const SUCCESS_METRICS = {
   customer: {
-    heading: "Sukses untuk Apotek Pelanggan",
+    heading: "Apotek yang lebih sehat dan terkendali",
     outcomes: [
-      "Data operasional lengkap, teraudit, dan akurat",
-      "Pemilik bisa memantau ringkasan harian dari mana pun",
-      "Selisih kas & stok menurun / terlacak",
-      "Obat kedaluwarsa terdeteksi lebih dini, pembuangan berkurang",
-      "Kesalahan harga menurun",
+      "Data transaksi, stok, dan pembelian tersusun lebih lengkap.",
+      "Aktivitas operasional memiliki jejak yang dapat ditelusuri.",
+      "Pemilik dapat melihat ringkasan harian dari mana pun.",
+      "Selisih kas dan stok lebih mudah ditemukan serta ditindaklanjuti.",
+      "Kedaluwarsa dan kesalahan harga dapat dikenali lebih awal.",
     ],
   },
   business: {
-    heading: "Sukses untuk Apoterra (Bisnis)",
-    priorities: [
-      { rank: 1, label: "Retensi", description: "Pengguna tetap aktif menggunakan Apoterra." },
-      { rank: 2, label: "Aktivasi", description: "Pengguna baru mencapai nilai inti dengan cepat." },
-      { rank: 3, label: "Pertumbuhan", description: "Adopsi meluas ke lebih banyak apotek." },
-      { rank: 4, label: "Kepuasan (NPS)", description: "Pengguna merekomendasikan Apoterra." },
-    ],
+    heading: "Siap mengikuti pertumbuhan apotek Anda",
+    description:
+      "Mulai dari satu toko, bangun kebiasaan operasional yang sehat, lalu kembangkan pengelolaan ke lebih banyak cabang dengan fondasi yang tetap teratur.",
   },
 };
 
 export const FOOTER = {
-  tagline: "Berpijak kokoh. Bertumbuh tenang.",
+  tagline: "Operasional apotek yang lebih teratur, transparan, dan siap bertumbuh.",
   columns: [
     {
-      heading: "Produk",
-      links: ["Fitur", "Pilar", "Prinsip", "Harga"],
+      heading: "Apoterra",
+      links: ["Fitur", "Pilar Kami", "Untuk Apotek Anda"],
     },
     {
-      heading: "Perusahaan",
-      links: ["Tentang Kami", "Visi & Misi", "Karier", "Kontak"],
-    },
-    {
-      heading: "Dukungan",
-      links: ["Pusat Bantuan", "Dokumentasi", "Status Sistem", "Kebijakan Privasi"],
+      heading: "Informasi",
+      links: ["Visi & Misi", "Hubungi Kami", "Kebijakan Privasi"],
     },
   ],
-  copyright: "© 2026 Apoterra. Semua hak dilindungi.",
+  copyright: "\u00A9 2026 Apoterra. Semua hak dilindungi.",
 };

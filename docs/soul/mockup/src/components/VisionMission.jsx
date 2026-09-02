@@ -1,4 +1,4 @@
-// Vision & Mission section — big vision quote + numbered mission items.
+// Vision & Mission section — heading, big vision quote + numbered mission items.
 
 import Section from "./Section";
 import { VISION_MISSION } from "../data/content";
@@ -8,7 +8,7 @@ export default function VisionMission() {
     <Section id="visi" background="surface">
       <div className="mb-12 text-center">
         <h2 className="font-serif text-3xl font-semibold text-arang md:text-4xl">
-          Visi &amp; Misi
+          {VISION_MISSION.heading}
         </h2>
       </div>
 

@@ -1,4 +1,4 @@
-// Hero section — tagline, narrative, promise, dual CTAs, prominent logo.
+// Hero section — eyebrow tagline, headline, narrative, promise, dual CTAs, prominent logo.
 
 import Logo from "./Logo";
 import Button from "./Button";
@@ -13,14 +13,14 @@ export default function Hero() {
         <Logo className="h-20 w-20 md:h-24 md:w-24" />
       </div>
 
-      {/* Tagline */}
+      {/* Eyebrow tagline */}
       <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-tanah">
         {HERO.tagline}
       </p>
 
-      {/* Headline derived from tagline */}
+      {/* Headline */}
       <h1 className="mx-auto max-w-3xl font-serif text-4xl font-bold leading-tight text-arang md:text-5xl">
-        {HERO.tagline}
+        {HERO.headline}
       </h1>
 
       {/* Narrative */}
@@ -42,7 +42,7 @@ export default function Hero() {
           variant="secondary"
           className="px-8 py-3 text-base"
           onClick={() =>
-            document.getElementById("pilar")?.scrollIntoView({ behavior: "smooth" })
+            document.getElementById("fitur")?.scrollIntoView({ behavior: "smooth" })
           }
         >
           {HERO.secondaryCta}

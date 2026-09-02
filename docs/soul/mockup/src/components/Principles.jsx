@@ -1,17 +1,17 @@
-// Principles section — 3 core principles + highlighted "Standar Ganda" callout.
+// Principles section — 3 core principles + highlighted standards callout.
 
 import Section from "./Section";
-import { PRINCIPLES } from "../data/content";
+import { PRINCIPLES, PRINCIPLES_HEADING } from "../data/content";
 
 export default function Principles() {
   return (
     <Section id="prinsip" background="surface">
       <div className="mb-12 text-center">
         <h2 className="font-serif text-3xl font-semibold text-arang md:text-4xl">
-          Prinsip Produk
+          {PRINCIPLES_HEADING.heading}
         </h2>
         <p className="mt-3 text-text-secondary">
-          Nilai-nilai non-negosiable yang membentuk setiap fitur Apoterra.
+          {PRINCIPLES_HEADING.description}
         </p>
       </div>
 
@@ -32,7 +32,7 @@ export default function Principles() {
         ))}
       </div>
 
-      {/* Standar Ganda callout */}
+      {/* Standards callout */}
       <div className="mt-12 rounded-2xl border-2 border-tanah bg-tanah-tint-1 p-8 text-center">
         <h3 className="mb-4 font-serif text-2xl font-bold text-arang">
           {PRINCIPLES.dualStandards.heading}
