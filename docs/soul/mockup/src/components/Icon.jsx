@@ -137,12 +137,6 @@ const ICON_PATHS = {
     </g>
   ),
 
-  // Chevron right for links
-  chevronRight: (
-    <g fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="10 6 22 16 10 26" />
-    </g>
-  ),
 };
 
 /**
