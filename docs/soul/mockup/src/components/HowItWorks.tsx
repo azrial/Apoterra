@@ -23,47 +23,59 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section id="cara-kerja" className="bg-kapur py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
-        <h2 className="mb-14 max-w-lg font-serif text-3xl font-bold tracking-tight text-arang md:text-4xl">
+    <section id="cara-kerja" className="relative bg-surface py-20 md:py-28">
+      <div className="grain absolute inset-0" />
+      <div className="relative mx-auto max-w-6xl px-6">
+        <h2 className="mb-16 max-w-lg font-serif text-3xl font-bold tracking-tight text-arang md:text-4xl">
           Mulai dalam empat langkah
         </h2>
 
-        {/* Two-column layout: steps left, large pull quote right */}
-        <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[1fr_0.8fr]">
-          {/* Left: numbered list with inline numbers */}
-          <div className="space-y-0">
-            {STEPS.map((item, index) => (
-              <div
-                key={item.title}
-                className="flex gap-5 border-l border-border py-6 pl-6 first:pt-0 last:pb-0"
-              >
-                <span className="shrink-0 -ml-[33px] w-6 pt-0.5 text-right font-sans text-xs font-medium text-batu">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="text-base font-semibold text-arang">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1.5 max-w-sm text-sm leading-relaxed text-text-secondary">
-                    {item.description}
-                  </p>
+        <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[1fr_0.7fr]">
+          {/* Left: step cards with connected timeline */}
+          <div className="relative">
+            {/* Vertical connector line */}
+            <div className="absolute top-2 bottom-2 left-[23px] w-px bg-border md:hidden" />
+
+            <div className="space-y-8 md:space-y-0 md:divide-y md:divide-border">
+              {STEPS.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="relative flex gap-6 md:py-8 first:md:pt-0 last:md:pb-0"
+                >
+                  {/* Step number circle */}
+                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-kapur bg-arang font-sans text-sm font-bold text-kapur shadow-sm">
+                    {index + 1}
+                  </div>
+
+                  <div className="pt-2 md:pt-3">
+                    <h3 className="text-base font-semibold text-arang md:text-lg">
+                      {item.title}
+                    </h3>
+                    <p className="mt-1.5 max-w-md text-sm leading-relaxed text-text-secondary">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          {/* Right: contextual anchor — a single statement that reinforces the value */}
-          <div className="flex items-center lg:sticky lg:top-32 lg:h-fit">
-            <blockquote className="border-l-2 border-tanah pl-6">
-              <p className="font-serif text-xl leading-snug text-arang md:text-2xl">
-                Dari satu toko menjadi jaringan yang kokoh — tanpa ganti sistem,
-                tanpa kehilangan kendali.
-              </p>
-              <footer className="mt-4 text-sm text-text-secondary">
-                Pertumbuhan organik, sesuai visi Apoterra.
-              </footer>
-            </blockquote>
+          {/* Right: sticky pull quote for rhythm break */}
+          <div className="hidden lg:flex lg:items-center">
+            <div className="sticky top-32 rounded-2xl border border-border bg-kapur p-8">
+              <blockquote>
+                <p className="font-serif text-xl leading-snug text-arang md:text-2xl">
+                  Dari satu toko menjadi jaringan yang kokoh — tanpa ganti
+                  sistem, tanpa kehilangan kendali.
+                </p>
+                <footer className="mt-5 flex items-center gap-3">
+                  <div className="h-px w-8 bg-tanah" />
+                  <span className="text-sm font-medium text-tanah">
+                    Pertumbuhan organik
+                  </span>
+                </footer>
+              </blockquote>
+            </div>
           </div>
         </div>
       </div>

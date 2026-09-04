@@ -10,7 +10,6 @@ export function Footer() {
   return (
     <footer className="bg-arang py-16 text-kapur">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Top row: brand + links */}
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
             <div className="mb-5 flex items-center gap-2.5">
@@ -46,7 +45,6 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/[0.08] pt-8 sm:flex-row">
           <p className="text-xs text-text-on-dark">
             &copy; {new Date().getFullYear()} Apoterra. Hak cipta dilindungi.

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette */
+  /* Brand palette — unchanged from brand.md */
   --color-arat-warm: #4A453D;
   --color-batu: #6E685E;
   --color-arang: #25231E;
@@ -39,10 +39,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Prescription grid pattern — subtle graph paper evoking medical charts */
-.rx-grid {
-  background-image:
-    linear-gradient(rgba(37, 35, 30, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 35, 30, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
+/* Grain texture overlay — adds tactile warmth, avoids flat digital feel */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
 }
