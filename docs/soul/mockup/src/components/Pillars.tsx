@@ -38,35 +38,33 @@ const PILLARS: PillarItem[] = [
 
 export function Pillars() {
   return (
-    <section id="keunggulan" className="relative bg-kapur py-20 md:py-28">
+    <section id="keunggulan" className="relative flex min-h-screen items-center bg-kapur">
       <div className="grain absolute inset-0" />
-      <div className="relative mx-auto max-w-6xl px-6">
-        <h2 className="mb-16 max-w-lg font-serif text-3xl font-bold tracking-tight text-arang md:text-4xl">
+      <div className="relative mx-auto w-full max-w-6xl px-6 py-24">
+        <h2 className="mb-16 max-w-lg font-serif text-3xl font-bold tracking-tight text-arang md:text-5xl">
           Tiga pilar yang menopang
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           {PILLARS.map((pillar) => (
             <div
               key={pillar.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-surface to-kapur p-8 transition-all hover:border-tanah/30 hover:shadow-lg hover:shadow-arang/5"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-surface to-kapur p-10 transition-all hover:border-tanah/30 hover:shadow-lg hover:shadow-arang/5"
             >
-              {/* Colored accent glow behind icon */}
               <div
                 className={`absolute -top-8 -left-8 h-32 w-32 rounded-full from-transparent to-transparent transition-all duration-500 ${pillar.glowGradient}`}
               />
 
-              {/* Icon with gradient background */}
               <div
-                className={`relative mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${pillar.gradient} text-kapur shadow-md`}
+                className={`relative mb-8 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br ${pillar.gradient} text-kapur shadow-md`}
               >
-                <pillar.icon className="h-7 w-7" />
+                <pillar.icon className="h-8 w-8" />
               </div>
 
-              <h3 className="font-serif text-xl font-bold text-arang">
+              <h3 className="font-serif text-2xl font-bold text-arang">
                 {pillar.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-text-secondary">
+              <p className="mt-4 text-base leading-relaxed text-text-secondary">
                 {pillar.description}
               </p>
             </div>

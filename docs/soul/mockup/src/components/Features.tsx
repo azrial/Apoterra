@@ -48,21 +48,19 @@ const FEATURES: FeatureItem[] = [
 
 export function Features() {
   return (
-    <section id="fitur" className="relative bg-surface py-20 md:py-28">
+    <section id="fitur" className="relative flex min-h-screen items-center bg-surface">
       <div className="grain absolute inset-0" />
-      <div className="relative mx-auto max-w-6xl px-6">
-        <h2 className="mb-16 max-w-lg font-serif text-3xl font-bold tracking-tight text-arang md:text-4xl">
+      <div className="relative mx-auto w-full max-w-6xl px-6 py-24">
+        <h2 className="mb-16 max-w-lg font-serif text-3xl font-bold tracking-tight text-arang md:text-5xl">
           Semua yang apotek Anda butuhkan
         </h2>
 
-        {/* Uniform 3-column grid */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((feature) => (
             <div
               key={feature.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-kapur to-surface p-7 transition-all hover:border-tanah/30 hover:shadow-md hover:shadow-tanah/5"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-kapur to-surface p-8 transition-all hover:border-tanah/30 hover:shadow-md hover:shadow-tanah/5"
             >
-              {/* Accent glow on hover */}
               <div className="absolute -top-12 -right-12 h-24 w-24 rounded-full bg-tanah/0 transition-all duration-500 group-hover:bg-tanah/[0.06]" />
 
               <div className="flex items-start gap-5">
@@ -73,7 +71,7 @@ export function Features() {
                   <h3 className="text-base font-semibold text-arang md:text-lg">
                     {feature.title}
                   </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">
+                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                     {feature.description}
                   </p>
                 </div>

@@ -8,13 +8,14 @@ const FOOTER_LINKS = {
 
 export function Footer() {
   return (
-    <footer className="bg-arang py-16 text-kapur">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+    <footer className="relative bg-arang py-24 text-kapur">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-arang via-arang to-arat-warm/50" />
+      <div className="relative mx-auto max-w-6xl px-6">
+        <div className="grid gap-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
-            <div className="mb-5 flex items-center gap-2.5">
-              <ApoterraLogo className="h-7 w-7" />
-              <span className="font-serif text-lg font-bold tracking-tight">
+            <div className="mb-6 flex items-center gap-3">
+              <ApoterraLogo className="h-8 w-8" />
+              <span className="font-serif text-xl font-bold tracking-tight">
                 Apoterra
               </span>
             </div>
@@ -26,10 +27,10 @@ export function Footer() {
 
           {Object.entries(FOOTER_LINKS).map(([category, links]) => (
             <div key={category}>
-              <h4 className="mb-4 text-xs font-medium text-kapur/40">
+              <h4 className="mb-5 text-xs font-medium text-kapur/40">
                 {category}
               </h4>
-              <ul className="space-y-2.5">
+              <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
                     <a
@@ -45,21 +46,15 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/[0.08] pt-8 sm:flex-row">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/[0.08] pt-10 sm:flex-row">
           <p className="text-xs text-text-on-dark">
             &copy; {new Date().getFullYear()} Apoterra. Hak cipta dilindungi.
           </p>
           <div className="flex gap-6">
-            <a
-              href="#"
-              className="text-xs text-text-on-dark transition-colors hover:text-kapur"
-            >
+            <a href="#" className="text-xs text-text-on-dark transition-colors hover:text-kapur">
               Kebijakan Privasi
             </a>
-            <a
-              href="#"
-              className="text-xs text-text-on-dark transition-colors hover:text-kapur"
-            >
+            <a href="#" className="text-xs text-text-on-dark transition-colors hover:text-kapur">
               Syarat Layanan
             </a>
           </div>
