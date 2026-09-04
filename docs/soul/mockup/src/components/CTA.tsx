@@ -2,14 +2,13 @@ import { IconArrowRight } from "../icons";
 
 export function CTA() {
   return (
-    <section id="mulai" className="relative overflow-hidden py-24 md:py-32">
-      {/* Dark full-width band */}
-      <div className="absolute inset-0 -z-10 bg-arang" />
-      <div className="pointer-events-none absolute inset-0 -z-10">
+    <section id="mulai" className="relative overflow-hidden bg-arang py-24 md:py-32">
+      {/* Organic accent */}
+      <div className="pointer-events-none absolute inset-0 -z-0">
         <div className="blob absolute -top-32 right-[-8%] h-[400px] w-[400px] bg-tanah/10 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-3xl px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
         <h2 className="font-serif text-3xl font-bold tracking-tight text-kapur md:text-4xl">
           Siap membangun fondasi yang kokoh?
         </h2>
