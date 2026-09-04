@@ -48,43 +48,30 @@ const FEATURES: FeatureItem[] = [
 
 export function Features() {
   return (
-    <section id="fitur" className="bg-surface py-20 md:py-28">
+    <section id="fitur" className="rx-grid py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Section header — left aligned, no eyebrow */}
-        <div className="mb-14 max-w-xl">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-arang md:text-4xl">
-            Semua yang apotek Anda butuhkan
-          </h2>
-          <p className="mt-3 text-text-secondary">
-            Dari pencatatan stok hingga pemantauan jarak jauh — fondasi
-            operasional yang lengkap dan akurat.
-          </p>
-        </div>
+        {/* Left-aligned header */}
+        <h2 className="mb-14 max-w-lg font-serif text-3xl font-bold tracking-tight text-arang md:text-4xl">
+          Semua yang apotek Anda butuhkan
+        </h2>
 
-        {/* Bento grid: first item spans 2 cols for visual hierarchy */}
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((feature, index) => (
+        {/* List layout with dividers — not cards */}
+        <div className="divide-y divide-border border-t border-b border-border">
+          {FEATURES.map((feature) => (
             <div
               key={feature.title}
-              className={`stagger-in group relative overflow-hidden rounded-2xl border border-border bg-kapur p-7 transition-colors hover:border-tanah/30 ${
-                index === 0 ? "sm:col-span-2 lg:col-span-2" : ""
-              }`}
+              className="group flex gap-5 py-7 transition-colors hover:bg-surface/60 md:gap-8 md:py-8"
             >
-              {/* Subtle accent line at top */}
-              <div className="absolute top-0 left-0 h-[2px] w-full bg-gradient-to-r from-tanah/0 via-tanah/40 to-tanah/0 opacity-0 transition-opacity group-hover:opacity-100" />
-
-              <div className="flex items-start gap-5">
-                <div className="shrink-0 flex h-10 w-10 items-center justify-center rounded-lg bg-arang/[0.04] text-batu transition-colors group-hover:bg-tanah/10 group-hover:text-tanah">
-                  <feature.icon className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="text-base font-semibold text-arang">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">
-                    {feature.description}
-                  </p>
-                </div>
+              <div className="shrink-0 pt-0.5 text-batu transition-colors group-hover:text-tanah">
+                <feature.icon className="h-5 w-5" />
+              </div>
+              <div className="max-w-xl">
+                <h3 className="text-base font-semibold text-arang">
+                  {feature.title}
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-text-secondary">
+                  {feature.description}
+                </p>
               </div>
             </div>
           ))}

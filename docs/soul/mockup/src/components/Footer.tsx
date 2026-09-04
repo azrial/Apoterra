@@ -10,8 +10,8 @@ export function Footer() {
   return (
     <footer className="bg-arang py-16 text-kapur">
       <div className="mx-auto max-w-6xl px-6">
+        {/* Top row: brand + links */}
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
-          {/* Brand column */}
           <div>
             <div className="mb-5 flex items-center gap-2.5">
               <ApoterraLogo className="h-7 w-7" />
@@ -25,10 +25,9 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Link columns */}
           {Object.entries(FOOTER_LINKS).map(([category, links]) => (
             <div key={category}>
-              <h4 className="mb-4 text-xs font-semibold tracking-wider uppercase text-kapur/50">
+              <h4 className="mb-4 text-xs font-medium text-kapur/40">
                 {category}
               </h4>
               <ul className="space-y-2.5">
@@ -53,10 +52,16 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Apoterra. Hak cipta dilindungi.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-xs text-text-on-dark transition-colors hover:text-kapur">
+            <a
+              href="#"
+              className="text-xs text-text-on-dark transition-colors hover:text-kapur"
+            >
               Kebijakan Privasi
             </a>
-            <a href="#" className="text-xs text-text-on-dark transition-colors hover:text-kapur">
+            <a
+              href="#"
+              className="text-xs text-text-on-dark transition-colors hover:text-kapur"
+            >
               Syarat Layanan
             </a>
           </div>
