@@ -55,37 +55,31 @@ export function Features() {
           Semua yang apotek Anda butuhkan
         </h2>
 
-        {/* Bento grid with varied sizes for visual rhythm */}
+        {/* Uniform 3-column grid */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((feature, index) => {
-            /* First item spans 2 columns for hierarchy */
-            const isFeatured = index === 0;
-            return (
-              <div
-                key={feature.title}
-                className={`group relative overflow-hidden rounded-2xl border border-border bg-kapur p-7 transition-all hover:border-tanah/30 hover:shadow-md hover:shadow-tanah/5 ${
-                  isFeatured ? "sm:col-span-2" : ""
-                }`}
-              >
-                {/* Accent glow on hover */}
-                <div className="absolute -top-12 -right-12 h-24 w-24 rounded-full bg-tanah/0 transition-all duration-500 group-hover:bg-tanah/[0.06]" />
+          {FEATURES.map((feature) => (
+            <div
+              key={feature.title}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-kapur p-7 transition-all hover:border-tanah/30 hover:shadow-md hover:shadow-tanah/5"
+            >
+              {/* Accent glow on hover */}
+              <div className="absolute -top-12 -right-12 h-24 w-24 rounded-full bg-tanah/0 transition-all duration-500 group-hover:bg-tanah/[0.06]" />
 
-                <div className={`flex gap-5 ${isFeatured ? "items-start md:items-center md:gap-8" : "items-start"}`}>
-                  <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-arang/[0.04] text-batu transition-colors group-hover:bg-tanah/10 group-hover:text-tanah">
-                    <feature.icon className="h-6 w-6" />
-                  </div>
-                  <div className={isFeatured ? "md:flex-1" : ""}>
-                    <h3 className="text-base font-semibold text-arang md:text-lg">
-                      {feature.title}
-                    </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">
-                      {feature.description}
-                    </p>
-                  </div>
+              <div className="flex items-start gap-5">
+                <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-arang/[0.04] text-batu transition-colors group-hover:bg-tanah/10 group-hover:text-tanah">
+                  <feature.icon className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-arang md:text-lg">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
