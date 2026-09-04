@@ -1,0 +1,12 @@
+# Ignore everything by default
+*
+
+# Allow gitignore itself
+!.gitignore
+
+# Allow mockup directory (but not node_modules/dist)
+!docs/soul/mockup/
+!docs/soul/mockup/**
+docs/soul/mockup/node_modules/
+docs/soul/mockup/dist/
+docs/soul/mockup/.npm/
