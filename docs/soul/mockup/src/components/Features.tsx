@@ -60,13 +60,13 @@ export function Features() {
           {FEATURES.map((feature) => (
             <div
               key={feature.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-kapur p-7 transition-all hover:border-tanah/30 hover:shadow-md hover:shadow-tanah/5"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-kapur to-surface p-7 transition-all hover:border-tanah/30 hover:shadow-md hover:shadow-tanah/5"
             >
               {/* Accent glow on hover */}
               <div className="absolute -top-12 -right-12 h-24 w-24 rounded-full bg-tanah/0 transition-all duration-500 group-hover:bg-tanah/[0.06]" />
 
               <div className="flex items-start gap-5">
-                <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-arang/[0.04] text-batu transition-colors group-hover:bg-tanah/10 group-hover:text-tanah">
+                <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-arang/[0.06] to-arang/[0.02] text-batu transition-colors group-hover:from-tanah/15 group-hover:to-tanah/5 group-hover:text-tanah">
                   <feature.icon className="h-6 w-6" />
                 </div>
                 <div>

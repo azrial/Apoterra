@@ -3,18 +3,22 @@ import { IconArrowRight } from "../icons";
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-24 pb-16 md:pt-36 md:pb-28">
-      {/* Grain texture */}
+      {/* Gradient background — warm radial from top-right */}
+      <div className="absolute inset-0 -z-20 bg-gradient-to-br from-kapur via-kapur to-tanah/10" />
+      <div className="absolute top-0 right-0 -z-10 h-[600px] w-[600px] translate-x-1/4 -translate-y-1/4 rounded-full bg-tanah/[0.07] blur-3xl" />
       <div className="grain absolute inset-0 -z-10" />
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-x-16 gap-y-12 lg:grid-cols-[1.3fr_1fr] lg:items-center">
-          {/* Left: dramatic headline */}
+          {/* Left: dramatic headline with gradient text */}
           <div>
             <h1 className="font-serif text-[clamp(2.75rem,5.5vw,5rem)] leading-[0.9] font-bold tracking-tight text-arang">
               Berpijak
               <br />
               kokoh.
-              <span className="block text-tanah">Bertumbuh tenang.</span>
+              <span className="block bg-gradient-to-r from-tanah to-batu bg-clip-text text-transparent">
+                Bertumbuh tenang.
+              </span>
             </h1>
 
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-text-secondary md:text-xl">
@@ -25,7 +29,7 @@ export function Hero() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
                 href="#mulai"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-arang px-8 py-4 text-base font-semibold text-kapur shadow-lg shadow-arang/20 transition-all hover:bg-arat-warm hover:shadow-xl hover:shadow-arang/25 focus:outline-none focus:ring-2 focus:ring-focus-ring"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-br from-arang to-arat-warm px-8 py-4 text-base font-semibold text-kapur shadow-lg shadow-arang/20 transition-all hover:shadow-xl hover:shadow-arang/25 focus:outline-none focus:ring-2 focus:ring-focus-ring"
               >
                 Coba Gratis
                 <IconArrowRight className="h-4 w-4" />
@@ -39,14 +43,14 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: abstract pharmacy shelf / dashboard composition */}
+          {/* Right: abstract dashboard composition */}
           <div className="relative hidden lg:block" aria-hidden="true">
             <div className="relative mx-auto aspect-square max-w-md">
-              {/* Background circle accent */}
-              <div className="absolute inset-0 rounded-full bg-tanah/[0.06]" />
+              {/* Gradient circle accent */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-tanah/10 to-batu/5" />
 
               {/* Main card — dashboard mockup */}
-              <div className="absolute inset-4 overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl shadow-arang/10">
+              <div className="absolute inset-4 overflow-hidden rounded-2xl border border-border bg-gradient-to-b from-surface to-kapur shadow-2xl shadow-arang/10">
                 {/* Card header */}
                 <div className="flex items-center gap-3 border-b border-border px-5 py-4">
                   <div className="h-3 w-3 rounded-full bg-success" />
@@ -75,7 +79,7 @@ export function Hero() {
                       (h, i) => (
                         <div
                           key={i}
-                          className="flex-1 rounded-t-sm bg-tanah/30 transition-all"
+                          className="flex-1 rounded-t-sm bg-gradient-to-t from-tanah/40 to-tanah/15 transition-all"
                           style={{ height: `${h}px` }}
                         />
                       ),
@@ -96,7 +100,7 @@ export function Hero() {
               </div>
 
               {/* Floating badge — expiry alert */}
-              <div className="absolute -right-2 bottom-12 rounded-xl border border-border bg-surface px-4 py-3 shadow-lg shadow-arang/8">
+              <div className="absolute -right-2 bottom-12 rounded-xl border border-border bg-gradient-to-br from-surface to-kapur px-4 py-3 shadow-lg shadow-arang/8">
                 <div className="flex items-center gap-2.5">
                   <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-warning/15 text-warning">
                     <svg

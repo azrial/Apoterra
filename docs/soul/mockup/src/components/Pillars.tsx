@@ -5,8 +5,8 @@ interface PillarItem {
   title: string;
   description: string;
   icon: ComponentType<SVGProps<SVGSVGElement>>;
-  accent: string;
-  accentGlow: string;
+  gradient: string;
+  glowGradient: string;
 }
 
 const PILLARS: PillarItem[] = [
@@ -15,24 +15,24 @@ const PILLARS: PillarItem[] = [
     description:
       "Data stok, harga, dan kedaluwarsa yang akurat sebagai fondasi operasional harian. Sistem yang andal, bukan sekadar alat pencatatan.",
     icon: IconDatabase,
-    accent: "bg-arat-warm",
-    accentGlow: "group-hover:bg-arat-warm/[0.08]",
+    gradient: "from-arat-warm to-batu-shade",
+    glowGradient: "group-hover:from-arat-warm/[0.10] group-hover:to-batu/[0.05]",
   },
   {
     title: "Kendali Penuh",
     description:
       "Visibilitas menyeluruh atas seluruh operasional apotek — kapan pun, dari mana pun. Pemilik tetap memegang kendali atas data dan bisnisnya.",
     icon: IconChart,
-    accent: "bg-batu",
-    accentGlow: "group-hover:bg-batu/[0.08]",
+    gradient: "from-batu to-tanah-shade",
+    glowGradient: "group-hover:from-batu/[0.10] group-hover:to-tanah/[0.05]",
   },
   {
     title: "Ketenangan Nyata",
     description:
       "Transparansi dan peringatan dini yang mengurangi kekhawatiran. Segalanya terlacak, teraudit, dan pada tempatnya.",
     icon: IconShield,
-    accent: "bg-tanah",
-    accentGlow: "group-hover:bg-tanah/[0.08]",
+    gradient: "from-tanah to-tanah-shade",
+    glowGradient: "group-hover:from-tanah/[0.10] group-hover:to-batu/[0.05]",
   },
 ];
 
@@ -49,16 +49,16 @@ export function Pillars() {
           {PILLARS.map((pillar) => (
             <div
               key={pillar.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-8 transition-all hover:border-tanah/30 hover:shadow-lg hover:shadow-arang/5"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-surface to-kapur p-8 transition-all hover:border-tanah/30 hover:shadow-lg hover:shadow-arang/5"
             >
               {/* Colored accent glow behind icon */}
               <div
-                className={`absolute -top-8 -left-8 h-32 w-32 rounded-full ${pillar.accent}/0 transition-all duration-500 ${pillar.accentGlow}`}
+                className={`absolute -top-8 -left-8 h-32 w-32 rounded-full from-transparent to-transparent transition-all duration-500 ${pillar.glowGradient}`}
               />
 
-              {/* Icon with colored background */}
+              {/* Icon with gradient background */}
               <div
-                className={`relative mb-6 flex h-14 w-14 items-center justify-center rounded-xl ${pillar.accent} text-kapur shadow-md`}
+                className={`relative mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${pillar.gradient} text-kapur shadow-md`}
               >
                 <pillar.icon className="h-7 w-7" />
               </div>

@@ -3,9 +3,10 @@ import { IconArrowRight } from "../icons";
 export function CTA() {
   return (
     <section id="mulai" className="relative overflow-hidden bg-arang py-24 md:py-32">
-      {/* Grain + subtle glow */}
-      <div className="grain absolute inset-0" />
-      <div className="absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-tanah/[0.06] blur-3xl" />
+      {/* Gradient background — warm diagonal sweep */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-arang via-arang to-arat-warm" />
+      <div className="grain absolute inset-0 -z-10" />
+      <div className="absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-tanah/[0.08] blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid gap-x-16 gap-y-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
@@ -22,7 +23,7 @@ export function CTA() {
           <div className="flex flex-col gap-4 lg:items-start">
             <a
               href="#"
-              className="inline-flex w-fit items-center gap-2 rounded-lg bg-kapur px-8 py-4 text-base font-semibold text-arang shadow-lg shadow-kapur/10 transition-all hover:bg-kapur/90 hover:shadow-xl hover:shadow-kapur/15 focus:outline-none focus:ring-2 focus:ring-focus-ring"
+              className="inline-flex w-fit items-center gap-2 rounded-lg bg-gradient-to-r from-kapur to-kapur/90 px-8 py-4 text-base font-semibold text-arang shadow-lg shadow-kapur/10 transition-all hover:shadow-xl hover:shadow-kapur/15 focus:outline-none focus:ring-2 focus:ring-focus-ring"
             >
               Coba Gratis Sekarang
               <IconArrowRight className="h-4 w-4" />
