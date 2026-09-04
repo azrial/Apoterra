@@ -11,23 +11,23 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-surface/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-kapur/80 backdrop-blur-lg">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
-          <ApoterraLogo className="h-8 w-8" />
-          <span className="font-serif text-xl font-bold tracking-tight text-arang">
+        <a href="#" className="flex items-center gap-2.5">
+          <ApoterraLogo className="h-7 w-7" />
+          <span className="font-serif text-lg font-bold tracking-tight text-arang">
             Apoterra
           </span>
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-1 md:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-text-secondary transition-colors hover:text-arang"
+              className="rounded-md px-3.5 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-arang/[0.04] hover:text-arang"
             >
               {link.label}
             </a>
@@ -38,7 +38,7 @@ export function Navbar() {
         <div className="hidden md:block">
           <a
             href="#mulai"
-            className="inline-flex items-center rounded-lg bg-arat-warm px-5 py-2.5 text-sm font-semibold text-kapur transition-colors hover:bg-arat-warm-hover focus:outline-none focus:ring-2 focus:ring-focus-ring"
+            className="inline-flex items-center rounded-lg bg-arang px-5 py-2 text-sm font-semibold text-kapur transition-colors hover:bg-arat-warm focus:outline-none focus:ring-2 focus:ring-focus-ring"
           >
             Mulai Sekarang
           </a>
@@ -47,7 +47,7 @@ export function Navbar() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-arang transition-colors hover:bg-border md:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-lg text-arang transition-colors hover:bg-arang/[0.06] md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -79,13 +79,13 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-border bg-surface px-6 pb-6 pt-4 md:hidden">
-          <div className="flex flex-col gap-4">
+        <div className="border-t border-border bg-kapur px-6 pb-6 pt-3 md:hidden">
+          <div className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-base font-medium text-text-secondary transition-colors hover:text-arang"
+                className="rounded-md px-3 py-2.5 text-base font-medium text-text-secondary transition-colors hover:bg-arang/[0.04] hover:text-arang"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -93,7 +93,7 @@ export function Navbar() {
             ))}
             <a
               href="#mulai"
-              className="mt-2 inline-flex items-center justify-center rounded-lg bg-arat-warm px-5 py-3 text-sm font-semibold text-kapur transition-colors hover:bg-arat-warm-hover"
+              className="mt-3 inline-flex items-center justify-center rounded-lg bg-arang px-5 py-3 text-sm font-semibold text-kapur transition-colors hover:bg-arat-warm"
               onClick={() => setMobileOpen(false)}
             >
               Mulai Sekarang

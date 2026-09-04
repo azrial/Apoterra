@@ -50,36 +50,42 @@ export function Features() {
   return (
     <section id="fitur" className="bg-surface py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Section header */}
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold tracking-wide text-tanah uppercase">
-            Fitur Inti
-          </p>
+        {/* Section header — left aligned, no eyebrow */}
+        <div className="mb-14 max-w-xl">
           <h2 className="font-serif text-3xl font-bold tracking-tight text-arang md:text-4xl">
             Semua yang apotek Anda butuhkan
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-text-secondary">
-            Dari pencatatan stok hingga pemantauan jarak jauh — Apoterra
-            menyediakan fondasi operasional yang lengkap dan akurat.
+          <p className="mt-3 text-text-secondary">
+            Dari pencatatan stok hingga pemantauan jarak jauh — fondasi
+            operasional yang lengkap dan akurat.
           </p>
         </div>
 
-        {/* Feature grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((feature) => (
+        {/* Bento grid: first item spans 2 cols for visual hierarchy */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {FEATURES.map((feature, index) => (
             <div
               key={feature.title}
-              className="group rounded-xl border border-border bg-kapur p-6 transition-all hover:border-tanah/40 hover:shadow-sm"
+              className={`stagger-in group relative overflow-hidden rounded-2xl border border-border bg-kapur p-7 transition-colors hover:border-tanah/30 ${
+                index === 0 ? "sm:col-span-2 lg:col-span-2" : ""
+              }`}
             >
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-tanah/10 text-tanah transition-colors group-hover:bg-tanah/15">
-                <feature.icon className="h-5 w-5" />
+              {/* Subtle accent line at top */}
+              <div className="absolute top-0 left-0 h-[2px] w-full bg-gradient-to-r from-tanah/0 via-tanah/40 to-tanah/0 opacity-0 transition-opacity group-hover:opacity-100" />
+
+              <div className="flex items-start gap-5">
+                <div className="shrink-0 flex h-10 w-10 items-center justify-center rounded-lg bg-arang/[0.04] text-batu transition-colors group-hover:bg-tanah/10 group-hover:text-tanah">
+                  <feature.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-arang">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="mb-2 text-lg font-semibold text-arang">
-                {feature.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-text-secondary">
-                {feature.description}
-              </p>
             </div>
           ))}
         </div>
