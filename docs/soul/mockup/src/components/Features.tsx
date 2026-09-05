@@ -1,5 +1,6 @@
 import { IconDatabase, IconChart, IconShield, IconClock, IconStore, IconAlert } from "../icons";
 import type { SVGProps, ComponentType } from "react";
+import { Reveal } from "./Reveal";
 
 interface FeatureItem {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
@@ -48,27 +49,38 @@ const FEATURES: FeatureItem[] = [
 
 export function Features() {
   return (
-    <section id="fitur" className="relative flex min-h-screen items-center bg-surface">
+    <section id="fitur" className="relative bg-surface py-28 lg:py-36">
       <div className="grain absolute inset-0" />
-      <div className="relative mx-auto w-full max-w-6xl px-6 py-24">
-        <h2 className="mb-16 max-w-lg font-serif text-3xl font-bold tracking-tight text-arang md:text-5xl">
-          Semua yang apotek Anda butuhkan
-        </h2>
+      <div className="relative mx-auto w-full max-w-6xl px-6">
+        {/* Section header */}
+        <Reveal>
+          <div className="mb-16 max-w-xl">
+            <p className="mb-3 text-xs font-semibold tracking-[0.15em] uppercase text-tanah">
+              Fitur
+            </p>
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-arang md:text-[2.75rem] md:leading-[1.05]">
+              Semua yang apotek Anda butuhkan
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-text-secondary md:text-lg">
+              Satu platform untuk operasional harian, pemantauan jarak jauh, dan pertumbuhan jaringan.
+            </p>
+          </div>
+        </Reveal>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map((feature) => (
-            <div
-              key={feature.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-kapur to-surface p-8 transition-all hover:border-tanah/30 hover:shadow-md hover:shadow-tanah/5"
-            >
-              <div className="absolute -top-12 -right-12 h-24 w-24 rounded-full bg-tanah/0 transition-all duration-500 group-hover:bg-tanah/[0.06]" />
+        {/* Grid */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {FEATURES.map((feature, index) => (
+            <Reveal key={feature.title} delay={index * 80}>
+              <div className="group relative h-full overflow-hidden rounded-2xl border border-border bg-kapur p-7 transition-all duration-300 hover:border-tanah/25 hover:shadow-[0_4px_24px_rgba(37,35,30,0.05)]">
+                {/* Subtle corner glow on hover */}
+                <div className="absolute -top-16 -right-16 h-32 w-32 rounded-full bg-tanah/0 transition-all duration-500 group-hover:bg-tanah/[0.05]" />
 
-              <div className="flex items-start gap-5">
-                <div className="shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-arang/[0.06] to-arang/[0.02] text-batu transition-colors group-hover:from-tanah/15 group-hover:to-tanah/5 group-hover:text-tanah">
-                  <feature.icon className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-base font-semibold text-arang md:text-lg">
+                <div className="relative">
+                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-arang/[0.04] text-batu transition-colors duration-300 group-hover:bg-tanah/10 group-hover:text-tanah-shade">
+                    <feature.icon className="h-5 w-5" />
+                  </div>
+
+                  <h3 className="text-[15px] font-semibold text-arang">
                     {feature.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -76,7 +88,7 @@ export function Features() {
                   </p>
                 </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
