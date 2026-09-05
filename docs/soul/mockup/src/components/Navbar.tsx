@@ -51,7 +51,7 @@ export function Navbar() {
         <div className="hidden md:block">
           <a
             href="#mulai"
-            className="inline-flex items-center rounded-lg bg-arang px-5 py-2 text-[13px] font-semibold tracking-wide text-kapur transition-all hover:bg-arat-warm hover:shadow-md hover:shadow-arang/10 focus:outline-none focus:ring-2 focus:ring-focus-ring"
+            className="inline-flex items-center rounded-lg bg-arang px-5 py-2 text-[13px] font-semibold tracking-wide text-kapur transition-all duration-200 hover:-translate-y-px hover:bg-arat-warm hover:shadow-md hover:shadow-arang/10 focus:outline-none focus:ring-2 focus:ring-focus-ring"
           >
             Mulai Sekarang
           </a>

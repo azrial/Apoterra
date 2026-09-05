@@ -44,14 +44,14 @@ export function Hero() {
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
                   href="#mulai"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-xl bg-arang px-8 py-4 text-[15px] font-semibold text-kapur shadow-[0_2px_12px_rgba(37,35,30,0.18)] transition-all hover:bg-arat-warm hover:shadow-[0_4px_20px_rgba(37,35,30,0.22)] focus:outline-none focus:ring-2 focus:ring-focus-ring"
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-xl bg-arang px-8 py-4 text-[15px] font-semibold text-kapur shadow-[0_2px_12px_rgba(37,35,30,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-arat-warm hover:shadow-[0_6px_24px_rgba(37,35,30,0.25)] focus:outline-none focus:ring-2 focus:ring-focus-ring"
                 >
                   Coba Gratis
                   <IconArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </a>
                 <a
                   href="#fitur"
-                  className="inline-flex items-center justify-center rounded-xl border border-border-strong bg-surface/60 px-8 py-4 text-[15px] font-semibold text-arang backdrop-blur-sm transition-all hover:border-tanah/30 hover:bg-surface hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-focus-ring"
+                  className="inline-flex items-center justify-center rounded-xl border border-border-strong bg-surface/60 px-8 py-4 text-[15px] font-semibold text-arang backdrop-blur-sm transition-all duration-200 hover:border-tanah/30 hover:bg-surface hover:shadow-md focus:outline-none focus:ring-2 focus:ring-focus-ring"
                 >
                   Pelajari Fitur
                 </a>

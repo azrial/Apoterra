@@ -27,14 +27,14 @@ export function CTA() {
             <div className="flex flex-col gap-4 lg:items-start">
               <a
                 href="#"
-                className="group inline-flex w-fit items-center gap-2.5 rounded-xl bg-kapur px-9 py-4.5 text-[15px] font-semibold text-arang shadow-[0_2px_16px_rgba(242,238,231,0.10)] transition-all hover:shadow-[0_4px_24px_rgba(242,238,231,0.15)] focus:outline-none focus:ring-2 focus:ring-focus-ring"
+                className="group inline-flex w-fit items-center gap-2.5 rounded-xl bg-kapur px-9 py-4 text-[15px] font-semibold text-arang shadow-[0_2px_16px_rgba(242,238,231,0.10)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_6px_28px_rgba(242,238,231,0.18)] focus:outline-none focus:ring-2 focus:ring-focus-ring"
               >
                 Coba Gratis Sekarang
                 <IconArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </a>
               <a
                 href="#"
-                className="inline-flex w-fit items-center rounded-xl border border-kapur/15 px-9 py-4.5 text-[15px] font-semibold text-kapur transition-all hover:border-kapur/30 hover:bg-kapur/[0.04] focus:outline-none focus:ring-2 focus:ring-focus-ring"
+                className="inline-flex w-fit items-center rounded-xl border border-kapur/15 px-9 py-4 text-[15px] font-semibold text-kapur transition-all duration-200 hover:border-kapur/30 hover:bg-kapur/[0.06] focus:outline-none focus:ring-2 focus:ring-focus-ring"
               >
                 Jadwalkan Demo
               </a>
